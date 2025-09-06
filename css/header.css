@@ -1,0 +1,136 @@
+/* Header */
+header {
+  position: absolute;
+  top: clamp(1rem, 2vw, 1.25rem);
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1104px;
+  padding: clamp(0.75rem, 2vw, 1rem);
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  backdrop-filter: blur(10px);
+}
+
+nav {
+  width: 100%;
+  height: clamp(3.5rem, 6vw, 4rem);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.4rem, 1vw, 0.6rem);
+  color: var(--text-dark);
+  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.logo:hover {
+  transform: scale(1.02);
+  color: var(--primary-color);
+}
+
+.logo-img {
+  width: clamp(28px, 4vw, 35px);
+  height: clamp(28px, 4vw, 35px);
+  object-fit: contain;
+  transition: var(--transition);
+}
+
+.logo:hover .logo-img {
+  transform: rotate(5deg);
+}
+
+.nav-links {
+  list-style: none;
+  gap: clamp(1.2rem, 3vw, 2.5rem);
+}
+
+.nav-links a {
+  position: relative;
+  padding: 0.5rem 0;
+  color: var(--text-medium);
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  font-weight: 500;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-primary);
+  transition: var(--transition);
+}
+
+.nav-links a:hover,
+.nav-links a[href="#home"] {
+  color: var(--primary-color);
+}
+
+.nav-links a:hover::after,
+.nav-links a[href="#home"]::after {
+  width: 100%;
+}
+
+.nav-icons {
+  gap: clamp(0.8rem, 2vw, 1.2rem);
+}
+
+.cart-icon {
+  position: relative;
+  padding: 0.5rem;
+  font-size: clamp(1.3rem, 2.5vw, 1.5rem);
+  color: var(--text-medium);
+  cursor: pointer;
+  border-radius: var(--border-radius-sm);
+  transition: var(--transition);
+}
+
+.cart-icon:hover {
+  transform: scale(1.05);
+}
+
+.cart-count {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: clamp(18px, 2.5vw, 22px);
+  height: clamp(18px, 2.5vw, 22px);
+  background: var(--secondary-color);
+  color: var(--white);
+  font-size: clamp(0.7rem, 1vw, 0.8rem);
+  font-weight: 600;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+/* Mobile Header */
+@media (max-width: 768px) {
+  header {
+    top: 0;
+    padding: 0.5rem 0;
+    background: var(--white);
+    border-radius: 0;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .cart-icon {
+    padding: 0.25rem;
+  }
+
+  .cart-count {
+    top: 0;
+    right: 0;
+  }
+}

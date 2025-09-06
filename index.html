@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Shoes Store</title>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/hero.css">
+	<link rel="stylesheet" href="css/features.css">
+	<link rel="stylesheet" href="css/prouduct.css">
+	<link rel="stylesheet" href="css/cart.css">
+	<link rel="stylesheet" href="css/search.css">
+	<link rel="stylesheet" href="css/footer.css">
+
+</head>
+
+<body>
+
+	<!-- Header Section -->
+	<header>
+		<div class="container">
+			<nav class="flex-between">
+				<a href="#" class="logo flex">
+					<img src="assets/img/logo.png" alt="Logo" class="logo-img">
+					<span>shoes</span>
+				</a>
+				<ul class="nav-links flex">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#latest-products">Products</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+				<div class="nav-icons flex">
+					<div class="search-box">
+						<input type="text" id="searchInput" placeholder="Search...">
+						<i class="fas fa-search"></i>
+					</div>
+					<div class="cart-icon" onclick="toggleCart()">
+						<i class="fas fa-shopping-cart"></i>
+						<span class="cart-count flex-center" id="cartCount">0</span>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+	<!-- Hero Section -->
+	<section class="hero">
+		<div class="container hero-content flex-between">
+			<div class="hero-text">
+				<h1>New Shoes Collection</h1>
+				<p>Experience unmatched comfort and stylish designs with our newest arrivals. From running shoes to
+					everyday wear, find the perfect pair that complements your style and supports your steps.</p>
+				<div class="add-to-bag flex">
+					<button class="add-btn flex-center" onclick="addLogoToCart(event)">
+						<i class="fas fa-plus"></i>
+					</button>
+					<span class="add-text">ADD TO BAG</span>
+				</div>
+			</div>
+			<div class="hero-image">
+				<img src="assets/img/hero-img.png" alt="Nike Shoe">
+			</div>
+		</div>
+	</section>
+
+	<!-- Features Section -->
+	<section class="features section_gap">
+		<div class="container">
+			<div class="features-grid">
+				<!-- single features -->
+				<div class="feature-card">
+					<div class="feature-icon flex-center">
+						<i class="fas fa-truck"></i>
+					</div>
+					<h6>Free Delivery</h6>
+					<p>Free Shipping on all order</p>
+				</div>
+				<!-- single features -->
+				<div class="feature-card">
+					<div class="feature-icon flex-center">
+						<i class="fas fa-rotate"></i>
+					</div>
+					<h6>Return Policy</h6>
+					<p>Free Shipping on all order</p>
+				</div>
+				<!-- single features -->
+				<div class="feature-card">
+					<div class="feature-icon flex-center">
+						<i class="fas fa-headset"></i>
+					</div>
+					<h6>24/7 Support</h6>
+					<p>Free Shipping on all order</p>
+				</div>
+				<!-- single features -->
+				<div class="feature-card">
+					<div class="feature-icon flex-center">
+						<i class="fas fa-lock"></i>
+					</div>
+					<h6>Secure Payment</h6>
+					<p>Free Shipping on all order</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Recommended Products Section -->
+	<section class="section_gap" id="latest-products">
+		<div class="container">
+			<div class="section-title">
+				<h1>Latest Products</h1>
+			</div>
+			<div class="products-grid" id="latestProductsContainer">
+				<!-- Products will be loaded dynamically -->
+			</div>
+		</div>
+	</section>
+
+	<!-- Poupular Products Section -->
+	<section class="section_gap" id="coming-products">
+		<div class="container">
+			<div class="section-title">
+				<h1>Coming Products</h1>
+			</div>
+			<div class="products-grid" id="comingProductsContainer">
+				<!-- Products will be loaded dynamically -->
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer Section -->
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-content">
+				<div class="footer-section">
+					<div class="footer-logo">
+						<img src="assets/img/logo.png" alt="Logo" class="footer-logo-img">
+						<span>shoes</span>
+					</div>
+					<p class="footer-description">Your trusted destination for premium quality shoes. Step into comfort and style with our curated collection.</p>
+				</div>
+				
+				<div class="footer-section">
+					<h4>Quick Links</h4>
+					<ul class="footer-links">
+						<li><a href="#home">Home</a></li>
+						<li><a href="#products">Products</a></li>
+						<li><a href="#about">About Us</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div>
+				
+				<div class="footer-section">
+					<h4>Customer Service</h4>
+					<ul class="footer-links">
+						<li><a href="#">Shipping Info</a></li>
+						<li><a href="#">Returns & Exchanges</a></li>
+						<li><a href="#">Size Guide</a></li>
+						<li><a href="#">FAQ</a></li>
+					</ul>
+				</div>
+				
+				<div class="footer-section">
+					<h4>Follow Us</h4>
+					<div class="social-media">
+						<a href="#" class="social-link">
+							<i class="fab fa-facebook-f"></i>
+						</a>
+						<a href="#" class="social-link">
+							<i class="fab fa-twitter"></i>
+						</a>
+						<a href="#" class="social-link">
+							<i class="fab fa-instagram"></i>
+						</a>
+						<a href="#" class="social-link">
+							<i class="fab fa-youtube"></i>
+						</a>
+						<a href="#" class="social-link">
+							<i class="fab fa-linkedin-in"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="footer-bottom">
+				<div class="footer-divider"></div>
+				<div class="footer-bottom-content">
+					<p class="copyright">&copy; 2025 All rights reserved.</p>
+					<div class="footer-bottom-links">
+						<a href="#">Privacy Policy</a>
+						<a href="#">Terms of Service</a>
+						<a href="#">Cookie Policy</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Load JavaScript files in dependency order -->
+	<script src="js/products-data.js"></script>
+	<script src="js/cart.js"></script>
+	<script src="js/product-renderer.js"></script>
+	<script src="js/search.js"></script>
+	<script src="js/main.js"></script>
+
+
+</body>
